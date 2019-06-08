@@ -1,0 +1,32 @@
+<body [ngStyle]="{'background-image': 'url(../assets/images/swingjauh3.jpg)', 'background-size': 'cover'}">
+  <nav class="top-right" [ngClass]="{
+    'open': isOpen
+  }">
+    <a class="disc l2" (click)="menuOnClick('promotion')">
+      <div>Promotion</div>
+    </a>
+    <a class="disc l3" (click)="menuOnClick('address')">
+      <div>Address</div>
+    </a>
+    <a class="disc l4" (click)="menuOnClick('contact')">
+      <div>Contact Us</div>
+    </a>
+    <a class="disc l5 toggle" (click)="toggleMenu()">
+      {{toggleText}}
+    </a>
+  </nav>
+  <div>
+    <div class="d-flex justify-content-center align-items-center" style="height:100px;">
+      <div><a (click)="menuOnClick('')"><img src="../assets/images/logo.png" width="250" alt="" /></a></div>
+    </div>
+
+    <div *ngIf="showHome">
+      <app-home></app-home>
+    </div>
+    <router-outlet></router-outlet>
+
+
+
+  </div>
+  <div class= "text-center copyright">©2019 BY CLARISSA POEDJIONO.</div>
+</body>
