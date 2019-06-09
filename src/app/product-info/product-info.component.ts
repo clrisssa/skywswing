@@ -41,27 +41,27 @@ export class ProductInfoComponent implements OnInit {
         this.checkedList[item]["1"] = true
       }
       this.captions = this.productService.getCaptions(this.prodName)
-      console.log("INITIAL: " )
-      console.log(this.checkedList)
+      // console.log("INITIAL: " )
+      // console.log(this.checkedList)
     });
 
   }
 
   navOnClick(item, path){
-    console.log("navOnClick: " + item + ", " + path)
-    console.log(this.checkedList[item])
+    // console.log("navOnClick: " + item + ", " + path)
+    // console.log(this.checkedList[item])
     for(let p of this.imgPaths[item]){
-      console.log("item: " + item + ", p: " + p)
+      // console.log("item: " + item + ", p: " + p)
       this.checkedList[item][p] = false;
     }
     this.checkedList[item][path] = true
-    console.log(this.checkedList[item])
+    // console.log(this.checkedList[item])
 
   }
 
   checkClass(item, path){
     let itemPath = item + "_" + path
-    console.log("checkClass: " + itemPath + ": " + this.checkedList[item][path])
+    // console.log("checkClass: " + itemPath + ": " + this.checkedList[item][path])
 
     if(this.checkedList[item][path]){
       return true

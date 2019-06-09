@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit {
   }
 
   toggleMenu() {
-    console.log("open: " + this.isOpen)
+    // console.log("open: " + this.isOpen)
     if (this.isOpen == false) {
       this.isOpen = true
       this.toggleText = "Close"
@@ -110,7 +110,7 @@ export class HomeComponent implements OnInit {
 
     this.activeLookup[item] = !initialState
 
-    console.log(this.activeLookup[item])
+    // console.log(this.activeLookup[item])
     this.changedImg = true;
   }
 

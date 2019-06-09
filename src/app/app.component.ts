@@ -15,7 +15,7 @@ export class AppComponent {
   showHome = true
 
   toggleMenu() {
-    console.log("open: " + this.isOpen)
+    // console.log("open: " + this.isOpen)
     if (this.isOpen == false) {
       this.isOpen = true
       this.toggleText = "Close"
@@ -28,7 +28,7 @@ export class AppComponent {
   constructor(private router: Router) { }
 
   menuOnClick(menuItem) {
-    console.log("menuonclick:" + menuItem)
+    // console.log("menuonclick:" + menuItem)
     if (menuItem == '') {
       this.showHome = true;
       this.router.navigate(['/']);
