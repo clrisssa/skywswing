@@ -7,8 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  imgPath: String = '../assets/images/swing5.jpg'
-  initialImg: String = '../assets/images/swing5.jpg'
+  imgPath: String = '/skyswing/assets/images/swing5.jpg'
+  initialImg: String = '/skyswing/assets/images/swing5.jpg'
   imgLookup = {}
 
   initialCaption: String = "Indulge your senses. Discover experiences"
@@ -29,10 +29,10 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    this.imgLookup['outdoor'] = '../assets/images/outdoor.jpg'
-    this.imgLookup['restaurant'] = '../assets/images/restaurant4.jpg'
-    this.imgLookup['spa'] = '../assets/images/spa.jpg'
-    this.imgLookup['photo'] = '../assets/images/photo.jpg'
+    this.imgLookup['outdoor'] = '/skyswing/assets/images/outdoor.jpg'
+    this.imgLookup['restaurant'] = '/skyswing/assets/images/restaurant4.jpg'
+    this.imgLookup['spa'] = '/skyswing/assets/images/spa.jpg'
+    this.imgLookup['photo'] = '/skyswing/assets/images/photo.jpg'
 
     this.captionLookup['outdoor'] = 'Discover new challenges throughout the day.'
     this.captionLookup['restaurant'] = 'Indulge in our delightful food & beverage offerings.'

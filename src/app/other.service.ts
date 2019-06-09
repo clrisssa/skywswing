@@ -9,7 +9,7 @@ export class OtherService {
 
   getOtherInfo(menuItem){
     let infoList = {}
-    infoList["contact"] = "Phone or Whatsapp at +62 81-338-848-177 \n Instagram @skyswingbali"
+    infoList["contact"] = "Phone or Whatsapp at +62 81-338-848-177 or +62 81-2465-775-78"
     infoList["address"] = "Jalan Dewi Saraswati No.9, \n Br. Karang Dalem No.1, Bongkasa Pertiwi 1"
     infoList["promotion"] = "COMING SOON"
 
