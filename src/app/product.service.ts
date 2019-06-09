@@ -15,7 +15,7 @@ export class ProductService {
     productList['spa'] = {}
     productList['photo'] = {}
 
-    const folder = '/skyswing/assets/images/' + 'swing';
+    const folder = '../assets/images/' + 'swing';
 
     productList['outdoor']["Hot Air Balloon"] = [1,2,3,4]
     productList['outdoor']["Swing"] = [1,2,3,4,5]

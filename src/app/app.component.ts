@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'skyswing';
   isOpen: boolean = false
   toggleText: String = "Book"
-  imgPath: String = '/skyswing/assets/images/swing.jpg'
+  imgPath: String = '../assets/images/swing.jpg'
 
   showHome = true
 
