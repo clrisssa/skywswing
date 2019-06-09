@@ -1,33 +1,29 @@
 <body [ngStyle]="{'background-image': 'url(../assets/images/swingjauh3.jpg)', 'background-size': 'cover'}">
 
-  <div class="d-flex justify-content-start justify-content-sm-start justify-content-md-center align-items-start align-items-sm-start align-items-md-center" style="height:100px;">
+  <div
+    class="d-flex justify-content-start justify-content-sm-start justify-content-md-center align-items-start align-items-sm-start align-items-md-center"
+    style="height:100px;">
     <div><a (click)="menuOnClick('')"><img src="../assets/images/logo.png" width="250" alt="" /></a></div>
-    
+
   </div>
-  <div class="row">
-    <div class="col-1 col-xs-1 col-sm-4 col-md-4">
-      <nav class="top-right" [ngClass]="{
+  <nav class="top-right" [ngClass]="{
       'open': isOpen
     }">
-        <a class="disc l2" (click)="menuOnClick('promotion')">
-          <div>Promotion</div>
-        </a>
-        <a class="disc l3" (click)="menuOnClick('address')">
-          <div>Address</div>
-        </a>
-        <a class="disc l4" (click)="menuOnClick('contact')">
-          <div>Contact Us</div>
-        </a>
-        <a class="disc l5 toggle" (click)="toggleMenu()">
-          {{toggleText}}
-        </a>
-      </nav>
-    </div>
-  </div>
-  <div class="row">
-    <div *ngIf="showHome">
-      <app-home></app-home>
-    </div>
+    <a class="disc l2" (click)="menuOnClick('promotion')">
+      <div>Promotion</div>
+    </a>
+    <a class="disc l3" (click)="menuOnClick('address')">
+      <div>Address</div>
+    </a>
+    <a class="disc l4" (click)="menuOnClick('contact')">
+      <div>Contact Us</div>
+    </a>
+    <a class="disc l5 toggle" (click)="toggleMenu()">
+      {{toggleText}}
+    </a>
+  </nav>
+  <div *ngIf="showHome">
+    <app-home></app-home>
   </div>
   <router-outlet></router-outlet>
 
