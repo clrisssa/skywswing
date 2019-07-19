@@ -121,7 +121,7 @@ export class HomeComponent implements OnInit {
       this.showIntro = true;
 
     }else{
-      this.router.navigate(['/info/' + prod])
+      // this.router.navigate(['/info/' + prod])
       this.showIntro = false;
     }
   }
