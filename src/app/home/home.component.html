@@ -23,16 +23,17 @@
 
     <div class="col-6 col-xs-6 col-sm-3 col-md-3  text-center">
       <!-- <a routerLink="/info/outdoor"> -->
-      <a routerLink="/info/outdoor" (click)="prodOnClick('outdoor')" routerLinkActive="active">
-        <div class="circle" (click)="mouseClick('outdoor')" (mouseenter)="mouseEnter('outdoor') "
-          (mouseleave)="mouseLeave('outdoor')">
+      <a (click)="prodOnClick('outdoor')">
+
+        <div class="circle" [class.active]="activeLookup['outdoor']" (click)="mouseClick('outdoor')"
+          (mouseenter)="mouseEnter('outdoor') " (mouseleave)="mouseLeave('outdoor')">
           <img class="circle-icon" src="../assets/images/outdoor_icon.png" alt="">
         </div>
         <p class="circle-title text-center">Outdoor Activities</p>
       </a>
     </div>
     <div class="col-6 col-xs-6 col-sm-3 col-md-3 ">
-      <a routerLink="/info/restaurant" (click)="prodOnClick('restaurant')" routerLinkActive="active">
+      <a (click)="prodOnClick('restaurant')">
         <!-- <a routerLink="/info/restaurant"> -->
         <div class="circle" [class.active]="activeLookup['restaurant']" (click)="mouseClick('restaurant')"
           (mouseenter)="mouseEnter('restaurant') " (mouseleave)="mouseLeave('restaurant')">
@@ -44,7 +45,7 @@
     </div>
 
     <div class="col-6 col-xs-6 col-sm-3 col-md-3 ">
-      <a routerLink="/info/spa" (click)="prodOnClick('spa')" routerLinkActive="active">
+      <a (click)="prodOnClick('spa')">
         <!-- <a routerLink="/info/spa"> -->
         <div class="circle" [class.active]="activeLookup['spa']" (click)="mouseClick('spa')"
           (mouseenter)="mouseEnter('spa') " (mouseleave)="mouseLeave('spa')">
@@ -57,7 +58,7 @@
     </div>
     <div class="col-6 col-xs-6 col-sm-3 col-md-3 ">
       <!-- <a routerLink="/info/photo"> -->
-      <a routerLink="/info/photo" (click)="prodOnClick('photo')" routerLinkActive="active">
+      <a (click)="prodOnClick('photo')">
         <div class="circle" [class.active]="activeLookup['photo']" (click)="mouseClick('photo')"
           (mouseenter)="mouseEnter('photo') " (mouseleave)="mouseLeave('photo')">
           <img class="circle-icon" src="../assets/images/photo_icon.png" alt="">
