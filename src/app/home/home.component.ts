@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Meta, Title } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-home',
@@ -26,7 +28,10 @@ export class HomeComponent implements OnInit {
   //show intro
   showIntro = true;
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private title: Title,
+    private meta: Meta) { }
 
   ngOnInit() {
     this.imgLookup['outdoor'] = '../assets/images/outdoor.jpg'
