@@ -34,6 +34,8 @@ export class HomeComponent implements OnInit {
     private meta: Meta) { }
 
   ngOnInit() {
+    this.title.setTitle('Sky Swing Bali');
+    this.meta.updateTag({ name: 'description', content: '' });
     this.imgLookup['outdoor'] = '../assets/images/outdoor.jpg'
     this.imgLookup['restaurant'] = '../assets/images/restaurant4.jpg'
     this.imgLookup['spa'] = '../assets/images/spa.jpg'
