@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.title.setTitle('Sky Swing Bali');
-    this.meta.updateTag({ name: 'description', content: '' });
+    this.meta.updateTag({ name: 'description', content: 'Sky Swing is the best all-in-one place to find fun outdoor adventures or simply to indulge yourself in food and beverage and to get a spa and massage after a long day in the sun. Enjoy Bali from a different perspective by getting on our hot-air balloon and swing or explore Balinese traditional villages firsthand, you can find all you need at Sky Swing Bali. You could also relax and unwind by treating yourself in our Spa & Massage center. Make your day even more special at our restaurant by the paddy field. Satisfy your palate by enjoying our special dishes in our restaurant prepared specially by our chef.' });
     this.imgLookup['outdoor'] = '../assets/images/outdoor.jpg'
     this.imgLookup['restaurant'] = '../assets/images/restaurant4.jpg'
     this.imgLookup['spa'] = '../assets/images/spa.jpg'

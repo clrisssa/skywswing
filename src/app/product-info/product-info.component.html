@@ -1,10 +1,45 @@
 <div class="container-fluid home-title">
   <!-- <h1>{{prodName}}</h1> -->
+ <br>
+  <div class="row">
+    <div class="col-12 col-xs-12 col-sm-6 col-md-6" *ngFor="let item of items">
+
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="col">
+          {{item}}
+          <div height="100" width="100">
+            <div *ngFor="let path of imgPaths[item]" class="carousel-inner">
+              <div class="carousel-item" [class.active]="checkedList[item][path]">
+                <img class="d-block w-100" src="../assets/images/{{prodName}}/{{item}}/{{path}}.jpg" alt='item'>
+              </div>
+            </div>
+            <a class="carousel-control-prev" role="button" data-slide="prev" (click)=prevImage(item)>
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" role="button" data-slide="next" (click)=nextImage(item)>
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <div class="row">
+            <div class="col">
+              <p class="text">{{captions[item]}}</p>
+            </div>
+
+          </div>
+          <br>
+        </div>
+
+      </div>
+    </div>
+  </div>
   <div class="row">
     <p><br></p>
   </div>
-  <!-- <div style="height: 500px"></div>
-  <p class="lead mb-0">You've reached the end!</p> -->
+
+
+<!-- 
   <div class="row">
     <div class="col-12 col-xs-12 col-sm-6 col-md-6" *ngFor="let item of items">
       <div class="row">
@@ -42,20 +77,20 @@
 
           </div>
 
-        </div>
+        </div> -->
 
 
         <!-- <div class="col">
         <p class="text">{{captions[item]}}</p>
       </div> -->
-      </div>
+      <!-- </div>
       <div class="row">
         <br>
       </div>
 
 
     </div>
-  </div>
+  </div> -->
 
   <!-- <div class="carousel">
     <input type="radio" id="carousel-1" name="carousel[]" checked>
