@@ -29,8 +29,8 @@ export class ProductService {
     productList['photo']["Photo Spots"] = [1,2,3,4,5] //8
     productList['photo']["Special Moments"] = [1,2,3,4] //8
 
-    productList['spa']["Spa and Massage"] = [1]   
-    productList['spa']["Relax"] = [1,2]
+    productList['spa']["Spa and Massage"] = [1,2,3]   
+    productList['spa']["Swimming Pool"] = [1,2]
 
 
     // console.log(productList[prod])
@@ -41,7 +41,7 @@ export class ProductService {
     let productList = {}
     productList['outdoor'] = ["Hot Air Balloon", "Swing", "Rafting", "VW Safari", "ATV"]
     productList['restaurant'] = ["Restaurant", "Food"]
-    productList['spa'] = ['Spa and Massage', 'Relax']
+    productList['spa'] = ['Spa and Massage', 'Swimming Pool']
     productList['photo'] = ['Photo Spots', 'Special Moments']
 
     return productList[prod]
@@ -64,6 +64,7 @@ export class ProductService {
     productList['restaurant']["Food"] = "Our menu, exclusively prepared by our executive chef will pleasantly surprise you during lunch or romantic dinner."
     productList['photo']["Photo Spots"] = "You will find every corner of our place perfect instagrammable because that's what's important, right?"
     productList['spa']["Spa and Massage"] = "What's better than enjoying our special spa & massage prepared by our professional masseuse after a long day of exploring Bali"
+    productList['spa']["Swimming Pool"] = "Chill by the pool while enjoying your favourite beverage served by our baristas."
 
     return productList[prod]
   }

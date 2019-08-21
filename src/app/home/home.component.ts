@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
 
   open: Boolean = false;
   isOpen: boolean = false
-  toggleText: String = "Book"
+  toggleText: String = "More"
 
   //keep track of the button statuses (active/not)
   activeLookup = {}
@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
     this.meta.updateTag({ name: 'description', content: 'Sky Swing is the best all-in-one place to find fun outdoor adventures or simply to indulge yourself in food and beverage and to get a spa and massage after a long day in the sun. Enjoy Bali from a different perspective by getting on our hot-air balloon and swing or explore Balinese traditional villages firsthand, you can find all you need at Sky Swing Bali. You could also relax and unwind by treating yourself in our Spa & Massage center. Make your day even more special at our restaurant by the paddy field. Satisfy your palate by enjoying our special dishes in our restaurant prepared specially by our chef.' });
     this.imgLookup['outdoor'] = '../assets/images/outdoor.jpg'
     this.imgLookup['restaurant'] = '../assets/images/restaurant4.jpg'
-    this.imgLookup['spa'] = '../assets/images/spa.jpg'
+    this.imgLookup['spa'] = '../assets/images/pool.jpg'
     this.imgLookup['photo'] = '../assets/images/photo.jpg'
 
     this.captionLookup['outdoor'] = 'Discover new challenges throughout the day.'
@@ -59,7 +59,7 @@ export class HomeComponent implements OnInit {
       this.toggleText = "Close"
     } else {
       this.isOpen = false
-      this.toggleText = "Book"
+      this.toggleText = "More"
     }
   }
 
@@ -121,7 +121,7 @@ export class HomeComponent implements OnInit {
     this.changedImg = true;
   }
 
-  prodOnClick(prod) {
+  prodOnClick(prod, el: HTMLElement) {
 
     if (this.router.url === '/info/' + prod) {
       this.router.navigate(['']);
@@ -131,5 +131,6 @@ export class HomeComponent implements OnInit {
       // this.router.navigate(['/info/' + prod])
       this.showIntro = false;
     }
+    el.scrollIntoView();
   }
 }

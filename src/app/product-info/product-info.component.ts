@@ -47,7 +47,7 @@ export class ProductInfoComponent implements OnInit {
       this.captions = this.productService.getCaptions(this.prodName)
       // console.log("INITIAL: " )
       // console.log(this.checkedList)
-      this.title.setTitle(this.prodName);
+      this.title.setTitle("Sky Swing Bali - " + this.prodName);
       let metaDesc = ""
       for (let it of this.items) {
         metaDesc = metaDesc + this.captions[it] + ", "
@@ -104,7 +104,8 @@ export class ProductInfoComponent implements OnInit {
   }
   prevImage(item) {
     let activeImg = 1;
-    let numItems = this.imgPaths[item].length;
+    let numItems = this.imgPaths[item].length
+    ;
     for (let p of this.imgPaths[item]) {
       if (this.checkedList[item][p] == true) {
         this.checkedList[item][p] = false

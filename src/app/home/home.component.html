@@ -1,11 +1,27 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-12 col-xs-12 col-sm-12 col-md-12">
-      <div class="parallax text-center fadeInClass" [class.changed-img]="changedImg"
-        [ngStyle]="{'background-image': 'url(' + imgPath + ')'}">
-        <div class="home-title">
-          {{caption}}
+      <div class="d-none d-sm-block">
+        <div class="parallax text-center fadeInClass" [class.changed-img]="changedImg"
+          [ngStyle]="{'background-image': 'url(' + imgPath + ')'}">
+          <div class="home-title">
+              {{caption}}
+            </div>
         </div>
+
+        
+      </div>
+
+
+      <div class="d-block d-sm-none">
+        <div class="parallax-mobile text-center fadeInClass" [class.changed-img]="changedImg"
+          [ngStyle]="{'background-image': 'url(' + imgPath + ')'}">
+          <div class="home-title-mobile">
+              {{caption}}
+            </div>
+        </div>
+
+        
       </div>
     </div>
   </div>
@@ -23,7 +39,7 @@
 
     <div class="col-6 col-xs-6 col-sm-3 col-md-3  text-center">
       <!-- <a routerLink="/info/outdoor"> -->
-      <a routerLink="/info/outdoor" (click)="prodOnClick('outdoor')" routerLinkActive="active">
+      <a routerLink="/info/outdoor" (click)="prodOnClick('outdoor', target)" routerLinkActive="active">
         <div class="circle" (click)="mouseClick('outdoor')" (mouseenter)="mouseEnter('outdoor') "
           (mouseleave)="mouseLeave('outdoor')">
           <img class="circle-icon" src="../assets/images/outdoor_icon.png" alt="">
@@ -32,7 +48,7 @@
       </a>
     </div>
     <div class="col-6 col-xs-6 col-sm-3 col-md-3 ">
-      <a routerLink="/info/restaurant" (click)="prodOnClick('restaurant')" routerLinkActive="active">
+      <a routerLink="/info/restaurant" (click)="prodOnClick('restaurant', target)" routerLinkActive="active">
         <!-- <a routerLink="/info/restaurant"> -->
         <div class="circle" [class.active]="activeLookup['restaurant']" (click)="mouseClick('restaurant')"
           (mouseenter)="mouseEnter('restaurant') " (mouseleave)="mouseLeave('restaurant')">
@@ -44,20 +60,20 @@
     </div>
 
     <div class="col-6 col-xs-6 col-sm-3 col-md-3 ">
-      <a routerLink="/info/spa" (click)="prodOnClick('spa')" routerLinkActive="active">
+      <a routerLink="/info/spa" (click)="prodOnClick('spa', target)" routerLinkActive="active">
         <!-- <a routerLink="/info/spa"> -->
         <div class="circle" [class.active]="activeLookup['spa']" (click)="mouseClick('spa')"
           (mouseenter)="mouseEnter('spa') " (mouseleave)="mouseLeave('spa')">
           <img class="circle-icon" src="../assets/images/spa_icon.png" alt="">
         </div>
 
-        <p class="circle-title text-center">Spa & Massage</p>
+        <p class="circle-title text-center">Spa & Swimming Pool</p>
       </a>
 
     </div>
     <div class="col-6 col-xs-6 col-sm-3 col-md-3 ">
       <!-- <a routerLink="/info/photo"> -->
-      <a routerLink="/info/photo" (click)="prodOnClick('photo')" routerLinkActive="active">
+      <a routerLink="/info/photo" (click)="prodOnClick('photo', target)" routerLinkActive="active">
         <div class="circle" [class.active]="activeLookup['photo']" (click)="mouseClick('photo')"
           (mouseenter)="mouseEnter('photo') " (mouseleave)="mouseLeave('photo')">
           <img class="circle-icon" src="../assets/images/photo_icon.png" alt="">
@@ -68,7 +84,7 @@
     </div>
   </div>
   <br>
-  <div class='text-center'>
+  <div #target class='text-center'>
     <h1 class="web-title">Sky Swing Bali</h1>
   </div>
   <div class="row" *ngIf="showIntro">

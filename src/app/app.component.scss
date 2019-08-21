@@ -17,12 +17,11 @@ body {
 }
 body {
   background: beige;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 nav {
-  z-index: 9999;
-
+  z-index: 1;
   color: white;
   display: block;
   position: fixed;
@@ -132,7 +131,7 @@ nav {
 
 .parallax {
   /* The image used */
-//   background-image: url("src/assets/images/IMG_3940.jpg");
+  //   background-image: url("src/assets/images/IMG_3940.jpg");
   height: 100%;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -147,7 +146,7 @@ nav {
   letter-spacing: 5px;
   line-height: 60vh;
   text-shadow: 3px 3px 10px black;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   border: 5px double rgba(255, 255, 255, 0.582);
   /* min-height: 550px;  */
 }
@@ -164,18 +163,18 @@ body {
   -o-background-size: cover;
 }
 
-.copyright{
+.copyright {
   font-size: 13px;
-  color: #ffffff8c
+  color: #ffffff8c;
 }
 
-.text>a {
+.text > a {
   color: white;
   font-size: 20px;
   letter-spacing: 2px;
   //   line-height: 60vh;
   //   text-shadow: 3px 3px 10px black;
-  font-family: 'Montserrat', 'sans-serif';
+  font-family: "Montserrat", "sans-serif";
   text-shadow: 3px 3px 10px black;
 
   /* min-height: 550px;  */
@@ -187,6 +186,47 @@ body {
   text-shadow: 3px 3px 10px black;
   //   line-height: 60vh;
   //   text-shadow: 3px 3px 10px black;
-  font-family: 'Montserrat', 'sans-serif';
+  font-family: "Montserrat", "sans-serif";
   /* min-height: 550px;  */
+}
+
+.speech-bubble {
+  position: relative;
+  background: #fffbf3ee;
+  border-radius: 0.4em;
+  width: 150px;
+  box-shadow: 3px 3px 10px rgb(255, 247, 177);
+}
+
+.speech-bubble:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-right-color: #fffbf3ee;
+  border-left: 0;
+  border-bottom: 0;
+  margin-top: -10px;
+  margin-left: -20px;
+}
+
+.brighten {
+  opacity: 0.8;
+}
+
+.brighten:hover {
+  opacity: 1;
+}
+
+.footer {
+  bottom: 0;
+  right:0;
+  height: 140px;
+  width: 190px;
+  z-index: 9999;
+  display: inline-block;
+  position: fixed;
 }

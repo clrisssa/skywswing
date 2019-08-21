@@ -1,6 +1,6 @@
 <div class="container-fluid home-title">
   <!-- <h1>{{prodName}}</h1> -->
- <br>
+  <br>
   <div class="row">
     <div class="col-12 col-xs-12 col-sm-6 col-md-6" *ngFor="let item of items">
 
@@ -8,6 +8,10 @@
         <div class="col">
           {{item}}
           <div height="100" width="100">
+            <ol class="carousel-indicators">
+              <li *ngFor="let path of imgPaths[item]" data-target="#carouselExampleIndicators" data-slide-to=path
+                [class.active]="checkedList[item][path]"></li>
+            </ol>
             <div *ngFor="let path of imgPaths[item]" class="carousel-inner">
               <div class="carousel-item" [class.active]="checkedList[item][path]">
                 <img class="d-block w-100" src="../assets/images/{{prodName}}/{{item}}/{{path}}.jpg" alt='item'>
@@ -26,7 +30,6 @@
             <div class="col">
               <p class="text">{{captions[item]}}</p>
             </div>
-
           </div>
           <br>
         </div>
@@ -39,7 +42,7 @@
   </div>
 
 
-<!-- 
+  <!-- 
   <div class="row">
     <div class="col-12 col-xs-12 col-sm-6 col-md-6" *ngFor="let item of items">
       <div class="row">
@@ -80,10 +83,10 @@
         </div> -->
 
 
-        <!-- <div class="col">
+  <!-- <div class="col">
         <p class="text">{{captions[item]}}</p>
       </div> -->
-      <!-- </div>
+  <!-- </div>
       <div class="row">
         <br>
       </div>

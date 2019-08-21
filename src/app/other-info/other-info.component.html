@@ -1,30 +1,76 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-12 col-xs-12 col-sm-12 col-md-12">
+    <div class="col-12 col-xs-12 col-sm-12 col-md-12 ">
+
       <div class="parallax text-center fadeInClass">
+        <div class="d-none d-sm-block">
+          <br>
+        </div>
         <div class="home-title">
           {{menuItem}}
         </div>
-        <div class="text">
-          {{infoCaption}}
-        </div>
-        <br>
-        <div *ngIf="menuItem=='contact'" class="text">
-          skyswingbali@gmail.com
+
+        <div class="d-none d-sm-block">
           <br><br>
-          Instagram @skyswingbali
         </div>
-        <br><br>
+
+        <div *ngIf="menuItem!='contact'" class="text">
+          <div class="text">
+            {{infoCaption}}
+          </div>
+        </div>
+
+        <div *ngIf="menuItem=='address'" class="text">
+            <a href="https://g.page/sky-swing-bali?share">
+              <br>
+              <img height="80" src="../assets/images/gmaps.png">
+              <br>
+              Locate Us
+              </a>
+        </div>
+
+        <div *ngIf="menuItem=='contact'" class="text">
+          <br>
+          <div class="row">
+            <div class="col-sm-4">
+              <a href="https://www.instagram.com/skyswingbali/">
+                <img height="50" src="../assets/images/instagram.png">
+                <div style="font-size: 22px; color:black; text-shadow: 3px 3px 10px white">
+                  skyswingbali
+                </div>
+              </a>
+              <br>
+            </div>
+            <div class="col-sm-4">
+              <a
+                href="https://wa.me/6281246577578/?text=Hello%2C%20there%20I%20would%20like%20to%20know%20more%20about%20the%20attractions%20at%20Sky%20Swing%20Bali%21">
+                <img height="50" src="../assets/images/whatsapp.png">
+                <div class="hidden-sm-down" style="font-size: 22px; color:black; text-shadow: 3px 3px 10px white">
+                  +62 812 4657 7578</div>
+                <div style="font-size: 18px; color:white; text-shadow: 3px 3px 10px white">
+                  click to chat</div>
+              </a>
+              <br>
+            </div>
+            <div class="col-sm-4">
+              <img height="50" src="../assets/images/mail.png">
+              <div style="font-size: 22px; color:black; text-shadow: 3px 3px 10px white">
+                skyswingbali@gmail.com
+              </div>
+              <br>
+            </div>
+          </div>
+          <br><br>
+        </div>
       </div>
-    </div>
-    <br><br>
-  </div>
-  <div class="row">
-    <div class="col">
-      <div style="height:300px"></div>
       <br><br>
     </div>
+    <div class="row">
+      <div class="col">
+        <div style="height:300px"></div>
+        <br><br>
+      </div>
 
 
+    </div>
   </div>
-</div>

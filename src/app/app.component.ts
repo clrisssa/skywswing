@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'skyswing';
   isOpen: boolean = false
-  toggleText: String = "Book"
+  toggleText: String = "More"
   imgPath: String = '../assets/images/swing.jpg'
 
   showHome = true
@@ -21,7 +21,7 @@ export class AppComponent {
       this.toggleText = "Close"
     } else {
       this.isOpen = false
-      this.toggleText = "Book"
+      this.toggleText = "More"
     }
   }
 
