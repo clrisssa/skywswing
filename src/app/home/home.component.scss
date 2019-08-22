@@ -19,11 +19,11 @@
   //   background-image: url("src/assets/images/IMG_3940.jpg");
   height: 240px;
   /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: 30% -10%;
+  // background-attachment: fixed;
+  background-position: 30% 30%;
   background-repeat: no-repeat;
-  background-size: 180%;
-  background-position: fixed;
+  background-size: 120%;
+  // background-position: fixed;
   border: 5px double rgba(255, 255, 255, 0.582);
   // line-height: 60vh;
 }

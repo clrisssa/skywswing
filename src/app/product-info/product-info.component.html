@@ -10,7 +10,7 @@
           <div height="100" width="100">
             <ol class="carousel-indicators">
               <li *ngFor="let path of imgPaths[item]" data-target="#carouselExampleIndicators" data-slide-to=path
-                [class.active]="checkedList[item][path]"></li>
+                [class.active]="checkedList[item][path]" (click)="goToImage(item, path)"></li>
             </ol>
             <div *ngFor="let path of imgPaths[item]" class="carousel-inner">
               <div class="carousel-item" [class.active]="checkedList[item][path]">

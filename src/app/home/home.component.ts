@@ -131,6 +131,6 @@ export class HomeComponent implements OnInit {
       // this.router.navigate(['/info/' + prod])
       this.showIntro = false;
     }
-    el.scrollIntoView();
+    el.scrollIntoView({behavior: 'smooth'});
   }
 }

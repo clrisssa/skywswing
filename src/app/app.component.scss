@@ -14,6 +14,7 @@ $start-rot: 190deg;
 html,
 body {
   height: 100%;
+  scroll-behavior: smooth;
 }
 body {
   background: beige;
@@ -221,12 +222,16 @@ body {
   opacity: 1;
 }
 
+.contact-footer{
+  z-index: 9998;
+}
+
 .footer {
   bottom: 0;
   right:0;
   height: 140px;
   width: 190px;
-  z-index: 9999;
+  z-index: 2;
   display: inline-block;
   position: fixed;
 }

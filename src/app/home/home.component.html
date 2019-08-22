@@ -1,28 +1,27 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-12 col-xs-12 col-sm-12 col-md-12">
+
+      <!-- parallax on desktop -->
       <div class="d-none d-sm-block">
         <div class="parallax text-center fadeInClass" [class.changed-img]="changedImg"
           [ngStyle]="{'background-image': 'url(' + imgPath + ')'}">
           <div class="home-title">
-              {{caption}}
-            </div>
+            {{caption}}
+          </div>
         </div>
-
-        
       </div>
 
-
+      <!-- parallax on mobile -->
       <div class="d-block d-sm-none">
         <div class="parallax-mobile text-center fadeInClass" [class.changed-img]="changedImg"
           [ngStyle]="{'background-image': 'url(' + imgPath + ')'}">
           <div class="home-title-mobile">
-              {{caption}}
-            </div>
+            {{caption}}
+          </div>
         </div>
-
-        
       </div>
+
     </div>
   </div>
 </div>
@@ -103,5 +102,5 @@
       <br><br>
     </div>
   </div>
-
 </div>
+

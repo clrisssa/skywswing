@@ -95,13 +95,14 @@ export class ProductInfoComponent implements OnInit {
     }
 
     this.checkedList[item][nextImg] = true;
-    console.log("nxt img: " + nextImg)
-    console.log("tot img: " + numItems)
+    // console.log("nxt img: " + nextImg)
+    // console.log("tot img: " + numItems)
 
-    console.log("prv img stats: " + this.checkedList[item][activeImg])
-    console.log("cur img stats: " + this.checkedList[item][nextImg])
+    // console.log("prv img stats: " + this.checkedList[item][activeImg])
+    // console.log("cur img stats: " + this.checkedList[item][nextImg])
 
   }
+
   prevImage(item) {
     let activeImg = 1;
     let numItems = this.imgPaths[item].length
@@ -121,14 +122,33 @@ export class ProductInfoComponent implements OnInit {
 
     this.checkedList[item][nextImg] = true;
 
-    console.log("nxt img: " + nextImg)
-    console.log("tot img: " + numItems)
-    console.log("items: " + this.items)
+    // console.log("nxt img: " + nextImg)
+    // console.log("tot img: " + numItems)
+    // console.log("items: " + this.items)
 
+    // console.log("prv img stats: " + this.checkedList[item][activeImg])
+    // console.log("cur img stats: " + this.checkedList[item][nextImg])
 
+  }
 
-    console.log("prv img stats: " + this.checkedList[item][activeImg])
-    console.log("cur img stats: " + this.checkedList[item][nextImg])
+  goToImage(item, targetPath) {
+    let activeImg = 1;
+    let numItems = this.imgPaths[item].length;
+    for (let p of this.imgPaths[item]) {
+      if (this.checkedList[item][p] == true) {
+        this.checkedList[item][p] = false
+        activeImg = p;
+        break;
+      }
+    }
+    let nextImg = targetPath
+
+    this.checkedList[item][nextImg] = true;
+    // console.log("nxt img: " + nextImg)
+    // console.log("tot img: " + numItems)
+
+    // console.log("prv img stats: " + this.checkedList[item][activeImg])
+    // console.log("cur img stats: " + this.checkedList[item][nextImg])
 
   }
 
